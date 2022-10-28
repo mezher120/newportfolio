@@ -3,7 +3,6 @@ import { Experience } from "../typings";
 
 export async function fetchExperience() {
     const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperience`);
-    console.log(response.data.experience, 'estoy en fetchexperience')
     const experience: Experience[] = response.data.experience;
     return experience;
 }
