@@ -1,8 +1,9 @@
-import axios from "axios";
+
 import { Experience } from "../typings";
 
 export async function fetchExperience() {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperience`);
-    const experience: Experience[] = response.data.experience;
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperience`);
+    const data = await response.json();
+    const experience: Experience[] = data.experience;
     return experience;
 }
