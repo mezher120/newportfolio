@@ -28,29 +28,7 @@ type Props = {
   socials: Social[]
 }
 
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const experience: Experience[] = await fetchExperience(); 
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const projects: Project[] = await fetchProjects();
-  const skills: Skill[] = await fetchSkills();
-  const socials: Social[] = await fetchSocials();
-  return {
-    props: {
-      experience,
-      pageInfo,
-      projects,
-      skills,
-      socials
-    }
-  };
-};
-
-
-
-
 const Home = ({experience, pageInfo, projects, skills, socials}: Props) => {
-  console.log(experience, 'estoy en index')
 
   return (
     <div className='bg-gray-900 text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden
@@ -102,3 +80,20 @@ const Home = ({experience, pageInfo, projects, skills, socials}: Props) => {
 export default Home
 
 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const experience: Experience[] = await fetchExperience(); 
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const projects: Project[] = await fetchProjects();
+  const skills: Skill[] = await fetchSkills();
+  const socials: Social[] = await fetchSocials();
+  return {
+    props: {
+      experience,
+      pageInfo,
+      projects,
+      skills,
+      socials
+    },
+    revalidate: 10,
+  };
+};
