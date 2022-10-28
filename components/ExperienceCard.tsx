@@ -6,7 +6,7 @@ type Props = {
   exp: Experience
 }
 
-export default function ({exp}: Props) {
+export default function ExperienceCard({exp}: Props) {
   return (
     <div className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[500px] 
     snap-center bg-gray-600 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden  ' >
@@ -25,8 +25,8 @@ export default function ({exp}: Props) {
             <p>{exp.dateStarted}- {exp.dateEnded}</p>
 
             <ul className='list-disc space-y-4 mt-2 text-lg h-36 w-auto overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-400'>
-                  {exp?.points.map(point => (
-                    <li>{point}</li>
+                  {exp?.points.map((point, index) => (
+                    <li key={index}>{point}</li>
                   ))}
             </ul>
         </div>

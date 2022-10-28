@@ -23,7 +23,7 @@ function Projects({projects}: Props) {
                 <img                 
                 className='w-44 h-44 rounded-md mt-5' src={urlFor(e.image).url()} alt='' />
                 <div> 
-                <h4><a href={e.linkToBuild} target='_blank' >{e.linkToBuild}</a></h4>
+                <h4><a href={e.linkToBuild} target='_blank' rel='noreferrer'>{e.linkToBuild}</a></h4>
                 </div>
 
         <div className='flex flex-col space-y-10 px-0 w-[70%]'>

@@ -56,7 +56,7 @@ const Home = ({experience, pageInfo, projects, skills, socials}: Props) => {
     <div className='bg-gray-900 text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden
     scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/60 '>
       <Head>
-        <title>Javier Ferrari Mezher 's Portfolio</title>
+        <title>Javier Ferrari Mezher - Portfolio</title>
       </Head>
 
      <Header socials={socials} ></Header>
