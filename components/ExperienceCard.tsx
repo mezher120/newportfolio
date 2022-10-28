@@ -18,7 +18,7 @@ export default function ({exp}: Props) {
             <p className='font-bold text-2xl mt-1'>{exp.company}</p>
             <div className='flex space-x-2'>
                 {exp?.technologies.map( tech => (
-                  <img className='h-10 w-10 rounded-full object-contain' src={urlFor(tech.image).url()} alt=''></img>
+                  <img key={tech._id} className='h-10 w-10 rounded-full object-contain' src={urlFor(tech.image).url()} alt=''></img>
                   
                 ))}
             </div>

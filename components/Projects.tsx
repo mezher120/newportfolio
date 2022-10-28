@@ -18,7 +18,7 @@ function Projects({projects}: Props) {
     <div className='relative w-full flex overflow-x-scroll overflow-y-hidden z-20 
     scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/60'>
         {projects?.map((e, i) => (
-            <div className='w-full h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 
+            <div key={e._id} className='w-full h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 
             md:p-44'>
                 <img                 
                 className='w-44 h-44 rounded-md mt-5' src={urlFor(e.image).url()} alt='' />
