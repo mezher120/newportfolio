@@ -23,3 +23,5 @@ export default async function handler(
     console.log(socials)
     res.status(200).json({ socials })
   }
+
+  // https://494n649f.api.sanity.io/v2021-03-25/data/query/production?query=*[_type%20==%20%22social%22]

@@ -9,7 +9,6 @@ type Props = {
 }
 
 export default function Header({socials}: Props) {
-    console.log(socials, "estoy en header");
   return (
     <div className='flex sticky top-0 justify-between max-w-7xl mx-auto items-start p-5 '>
         <motion.div 
