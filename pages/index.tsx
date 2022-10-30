@@ -93,7 +93,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
       projects,
       skills,
       socials
-    },
-    revalidate: 10,
+    }
+    // ,
+    // revalidate: 10,
   };
 };
