@@ -30,14 +30,16 @@ export default function Hero({pageInfo}: Props) {
             <Cursor></Cursor>
         </h1>
         <div className='pt-5'>
+            <Link href='#about'>
             <button className='buttonHero' onClick={() => fetchSocials()}>About</button>
+            </Link>
             <Link href='#projects'>
             <button className='buttonHero'>Projects</button>
             </Link>
             <Link href='#skills'>
             <button className='buttonHero'>Skills</button>
             </Link>
-            <Link href='#education'>
+            <Link href='#experience'>
             <button className='buttonHero'>Education</button>
             </Link>
         </div>
